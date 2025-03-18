@@ -8,7 +8,7 @@ Add this to your **audio_effects.xml**:
 
 Also you need to address some SELinux denials in **audioserver.te**:
 
-    get_prop(audioserver, vendor_audio_prop) # If Google or MTK device skip line
+    get_prop(audioserver, vendor_audio_prop)
 
     allow audioserver unlabeled:file { read write open getattr };
     allow hal_audio_default hal_audio_default:process { execmem };
